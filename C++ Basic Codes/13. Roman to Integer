@@ -1,0 +1,31 @@
+class Solution {
+public:
+      int romanToInt(string roman) {
+    unordered_map<char,int> ump;
+    ump['I'] = 1;
+    ump['V'] = 5;
+    ump['X'] = 10;
+    ump['L'] = 50;
+    ump['C'] = 100;
+    ump['D'] = 500;
+    ump['M'] = 1000;
+        int ans = 0;
+        int n = roman.length()-1;
+        int j = n-1;
+        int i = n;
+        while(i>=0)
+        {
+            ans+=ump[roman[i]];
+            if(i>0)
+            {
+            if(ump[roman[i-1]]< ump[roman[i]] && i>0)
+            {
+                ans -= ump[roman[i-1]];
+                --i;
+            }
+            }
+            --i;
+        }
+        return ans;
+    }
+};
