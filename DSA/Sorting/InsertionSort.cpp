@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
 
-void bubbleSort(int n, int a[])
+void insertionSort(int n, int a[])
 {
-    int i, j, temp;
-    for (i = 0; i < n - 1; i++)
-        for (j = 0; j < n - i - 1; j++)
-            if (a[j] > a[j + 1])
-            {
-                temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
-            }
-
+    int i, j, key;
+    for (j = 1; j < n; j++)
+    {
+        key = a[j];
+        i = j - 1;
+        while ((i > -1) && (a[i] > key))
+        {
+            a[i + 1] = a[i];
+            i--;
+        }
+        a[i + 1] = key;
+    }
     cout << "Sorted Array: "
          << "[ ";
     for (i = 0; i < n; i++)
@@ -23,7 +25,7 @@ void bubbleSort(int n, int a[])
 int main()
 {
     int n;
-    cout << "\n    Program for Bubble Sort\n------------------------------\n";
+    cout << "\n    Program for Insertion Sort\n------------------------------\n";
     cout << "Enter the number of elements (Size of array you want): ";
     cin >> n;
     int sortArray[n];
@@ -34,6 +36,6 @@ int main()
         cin >> sortArray[i];
     } /* Accepting of array finished*/
 
-    bubbleSort(n, sortArray);
+    insertionSort(n, sortArray);
     return 0;
 }
