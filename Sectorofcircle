@@ -1,5 +1,0 @@
-r = float(input('Enter the radius of circle: '))
-x = float(input('Enter the angle of sector: '))
-pi= 22/7
-Area = (x/360)*(pi*r*r)
-print("Area of a sector %.2f units" %Area)
