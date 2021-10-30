@@ -11,3 +11,7 @@
 ## Selection Sort
 
 <img align = "center" src="https://user-images.githubusercontent.com/68191677/136280755-fcaffcb8-5134-4b21-a320-1e4173f74604.png">
+
+## Quick Sort
+
+<img align = "center" src="https://user-images.githubusercontent.com/68191677/136670633-98bf46d6-fae0-4ded-9edd-02429ff76f69.png">
